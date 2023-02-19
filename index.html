@@ -76,8 +76,17 @@
                 <div class="card-body" v-show="datos">
                     
                     <dl v-for="data in item.data">
+
                         <dt>{{ data.prompt }}</dt>
+                        
                         <dd>{{ data.value }}</dd>
+
+                    </dl>
+
+                    <a :href=item.href class="btn btn-primary"> Saber más...</a>
+
+                        <button @click="toggleEditFromVisibility" class="btn btn-secondary">Editar</button>
+
             <!--
                  TODO: Componente item-data
             -->
