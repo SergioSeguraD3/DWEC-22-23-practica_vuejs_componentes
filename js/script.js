@@ -51,7 +51,7 @@ Vue.component('edit-form', {
     },
 
     props: ['itemdata'],
-    emit: ['formclose'],
+    emits: ['formClose'],
 
     methods:
     {
@@ -72,18 +72,16 @@ Vue.component('edit-form', {
 // TODO: Componente item-data
 Vue.component('item-data', {
 
-    data: function()
+    data: function() 
     {
 
-        return
-        {
+        return {
 
-            datos: true;
-            edicion: false;
-
+            datos: true,
+            edicion: false
+            
         }
-
-    }
+    },
 
     props: ['item'],
     methods:
@@ -109,7 +107,7 @@ Vue.component('item-data', {
 
     },
 
-    template: #itemData
+    template: '#itemData'
 
 })
 
