@@ -42,6 +42,31 @@ var server_data = {
 // TODO: Componente edit-form
 Vue.component('edit-form', {
 
+    data: function()
+    {
+
+        return
+        {}
+
+    },
+
+    props: ['itemdata'],
+    emit: ['formclose'],
+
+    methods:
+    {
+
+        closeForm()
+        {
+
+            this.$emit('formClose');
+            
+        }
+
+    },
+
+    template: '#editForm'
+
 })
 
 // TODO: Componente item-data
@@ -54,7 +79,8 @@ Vue.component('item-data', {
 var app = new Vue({
     el: '#app',
     data: {
-        col: server_data
+        col: server_data,
+        item: server_data. collection.items
     }
 });
 
