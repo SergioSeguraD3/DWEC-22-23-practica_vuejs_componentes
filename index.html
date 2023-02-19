@@ -55,7 +55,11 @@
 
                 <intput v-if="data.prompt != description" type="text" v-model="data.value">
 
-                <textarea></textarea>
+                <textarea v-else v-model="data.value" type="text"></textarea>
+
+            </dl>
+
+            <button @click="fromClose" class="btn btn-primary">Editar</button>
             <!--
                  TODO: Componente edit-form
             -->
