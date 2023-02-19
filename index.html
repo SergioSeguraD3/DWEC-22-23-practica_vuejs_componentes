@@ -83,10 +83,29 @@
 
                     </dl>
 
-                    <a :href=item.href class="btn btn-primary"> Saber más...</a>
+                    <a :href=item.href class="btn btn-primary">Saber más...</a>
 
                         <button @click="toggleEditFromVisibility" class="btn btn-secondary">Editar</button>
 
+                </div>
+
+                <div class="card-body" v-show="edicion">
+
+                    <dl v-for="data in item.data">
+
+                        <dt>{{ data.prompt }}</dt>
+
+                        <intput v-if="data.prompt != 'Description'" type="text" v-model="data.value">
+
+                        <textarea v-else v-model="data.value" type="text"></textarea>
+
+                    </dl>
+
+                    <button @click="fromClose" class="btn btn-primary">Cerrar</button>
+
+                </div>
+
+            </div>
             <!--
                  TODO: Componente item-data
             -->
@@ -95,6 +114,10 @@
 
 
         <!-- TODO: Cargar librería VueJS y archivo js/script.js -->
+
+        <script src="./js/script.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
     </body>
 
