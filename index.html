@@ -71,6 +71,13 @@
         <!-- Plantilla para el componente item-data -->
         <script type="text/x-template" id="itemData">
 
+            <div class="card" style="width: 20rem;">
+                
+                <div class="card-body" v-show="datos">
+                    
+                    <dl v-for="data in item.data">
+                        <dt>{{ data.prompt }}</dt>
+                        <dd>{{ data.value }}</dd>
             <!--
                  TODO: Componente item-data
             -->
